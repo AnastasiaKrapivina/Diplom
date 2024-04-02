@@ -117,7 +117,6 @@ public class News {
         onView((withId(sortButton))).perform(click());
     }
 
-
      private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

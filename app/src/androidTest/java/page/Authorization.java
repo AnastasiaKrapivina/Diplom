@@ -32,7 +32,7 @@ public class Authorization {
 
     public void waitForLoading() {
         Allure.step("Подождать загрузку");
-        long endTime = (System.currentTimeMillis() + 20000);
+        long endTime = (System.currentTimeMillis() + 8000);
         while (System.currentTimeMillis() < endTime) ;
     }
 

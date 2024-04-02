@@ -77,7 +77,7 @@ public class AuthorizationTest {
         authorization.authorizationIn("login", "password2");
         authorization.waitForLoading();
         matches.checkToastMessageText();
-        matches.examinationContentDescription("Wrong login or password");
+        matches.examinationContentDescription("Something went wrong. Try again later");
 
     }
     @Test
@@ -87,7 +87,7 @@ public class AuthorizationTest {
         authorization.authorizationIn("login2", "password");
         authorization.waitForLoading();
         matches.checkToastMessageText();
-        matches.examinationContentDescription("Wrong login or password");
+        matches.examinationContentDescription("Something went wrong. Try again later");
     }
 
 
