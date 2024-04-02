@@ -72,9 +72,12 @@ public class NewsTest {
     @DisplayName("Тест 12 Сортировка новостей в разделе Новости")
     public void sortNewsOnNewsTest() {
         navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromNewsPageToControlPanel();
+        news.addNews("Объявление", "Создание новости", "Создание новости");
         news.sortNewsOnControlPanel();
         authorization.waitForLoading();
         news.sortNewsOnControlPanel();
+        matches.searchNewsCategory("Создание новости", 0);
     }
 
     @Test

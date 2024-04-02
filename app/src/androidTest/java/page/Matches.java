@@ -19,22 +19,21 @@ import org.hamcrest.Matchers;
 import org.hamcrest.TypeSafeMatcher;
 import org.hamcrest.core.IsInstanceOf;
 
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class Matches {
-
-    // Прорверить переход на страницу:
     public void examinationValue(String value) {
+        Allure.step( "Прорверить переход на страницу");
         onView(withText(value)).check(matches(isDisplayed()));
     }
-
-    // Прорверить всплывающее окно при входе с ошибочными данными:
     public void examinationContentDescription(String value) {
+        Allure.step( "Прорверить всплывающее окно при входе с ошибочными данными");
         onView(allOf(withContentDescription(value), isDisplayed()));
     }
 
-    // Прорверить всплывающее окно:
     public void checkToastMessageText() {
+        Allure.step( "Прорверить всплывающее окно");
         ViewInteraction imageView = onView(
                 allOf(withContentDescription("app background image"),
                         withParent(withParent(IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class))),
@@ -42,15 +41,15 @@ public class Matches {
         imageView.check(matches(isDisplayed()));
     }
 
-// Прорверить появления новости по заголовку:
     public void searchNewsCategory(String heading, int position) {
+        Allure.step( "Прорверить появления новости по заголовку");
         onView(
                 allOf(withIndex(withId(R.id.news_item_title_text_view), position),
                         isDisplayed()))
                 .check(matches(withText(heading)));
     }
-    // Прорверить содержание новости:
     public void searchNewsDescription(String description, int position) {
+        Allure.step( "Прорверить содержание новости");
         onView(
                 allOf(withIndex(withId(R.id.news_item_description_text_view), position),
                         isDisplayed()))

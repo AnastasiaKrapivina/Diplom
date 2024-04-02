@@ -8,6 +8,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 import static org.hamcrest.Matchers.allOf;
 
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class Navigation {
@@ -17,29 +18,28 @@ public class Navigation {
     private static final int aboutBackButton = R.id.about_back_image_button;
     private static final int controlPanelButton = R.id.edit_news_material_button;
 
-    // Переход  с главной страницы через главное меню в разделы приложения
     public void navigationFromMainPageMainMenu(String chapter) {
+        Allure.step( "Переход  с главной страницы через главное меню в разделы приложения");
         onView(withId(mainMenu)).perform(click());
         onView(withText(chapter)).perform(click());
     }
 
-    // Переход  с главной страницы в раздел Новости через кнопку Все новости
     public void navigationFromMainPageFromAllNewsButton() {
+        Allure.step( "Переход  с главной страницы в раздел Новости через кнопку Все новости");
         onView(allOf(withId(allNewsButton), withText("All news"))).perform(click());
     }
-
-    // Переход  с главной страницы в раздел цитат
     public void navigationFromMainPageToOurMission() {
+        Allure.step( "Переход  с главной страницы в раздел цитат");
         onView(allOf(withId(ourMissionButton), withContentDescription("Our Mission"))).perform(click());
     }
 
-    // Переход  с из раздела Новости в раздел О приложении  через главное меню
     public void navigationFromNewsPageToControlPanel() {
+        Allure.step( "Переход  с из раздела Новости в раздел О приложении  через главное меню");
         onView(withId(controlPanelButton)).perform(click());
     }
 
-    // Переход  с из раздела О приложении на главную страницу
     public void navigationFromAboutToMainPage() {
+        Allure.step( "Переход  с из раздела О приложении на главную страницу");
         onView(withId(aboutBackButton)).perform(click());
     }
 }

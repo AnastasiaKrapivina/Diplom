@@ -32,6 +32,8 @@ import androidx.test.espresso.ViewAction;
 import androidx.test.espresso.ViewInteraction;
 import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.espresso.matcher.RootMatchers;
+
+import io.qameta.allure.kotlin.Allure;
 import page.Navigation;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
@@ -56,9 +58,8 @@ public class News {
     public static final int textInputIcon = com.google.android.material.R.id.text_input_end_icon;
     public static final int filterButton = R.id.filter_button;
 
-
-    // Добавить новость:
     public void addNews(String category, String heading, String description) {
+        Allure.step( "Добавить новость");
         onView(withId(addNewsImage)).perform(click());
         onView(allOf(withId(categoryIcon), withContentDescription("Show dropdown menu"))).perform(click());
         onView(withText(category))
@@ -74,15 +75,15 @@ public class News {
         onView((withId(saveButton))).perform(scrollTo(), click());
     }
 
-    // Отмена добавления новости:
-    public void cancelNews() {
+     public void cancelNews() {
+        Allure.step( "Отмена добавления новости");
         onView(withId(addNewsImage)).perform(click());
         onView(allOf(withId(cancelButton), withText("Cancel"))).perform(click());
         onView((withId(okButton))).perform(click());
     }
 
-    // Нажать на новость в Панели управления:
     public void clickNews(int position) {
+        Allure.step( "Нажать на новость для просмотра содержания");
         ViewInteraction recyclerView = onView(
                 allOf(withId(newsList),
                         childAtPosition(
@@ -91,8 +92,8 @@ public class News {
         recyclerView.perform(actionOnItemAtPosition(position, click()));
     }
 
-    // Фильтр новостей по категории:
     public void filterNewsCategory(String category) {
+        Allure.step( "Фильтр новостей по категории");
         onView((withId(filterNewsButton))).perform(click());
         onView(allOf(withId(textInputIcon), withContentDescription("Show dropdown menu"))).perform(click());
         onView(withText(category))
@@ -101,31 +102,18 @@ public class News {
         onView((withId(filterButton))).perform(click());
 
     }
-//
-//    // Фильтр новостей по дате:
-//    public void filterNewsDate() {
-//        onView((withId(filterNewsButton))).perform(click());
-//        onView(withId(R.id.news_item_publish_date_start_text_input_edit_text)).perform(click());
-//        onView((withId(okButton))).perform(click());
-//        onView(withId(R.id.news_item_publish_date_end_text_input_edit_text)).perform(click());
-//        onView((withId(okButton))).perform(click());
-//        onView((withId(filterButton))).perform(click());
-//    }
-
-    // Фильтр новостей с незаполненной формой:
     public void filterNewsEmpty() {
+        Allure.step( "Фильтр новостей с незаполненной формой");
         onView((withId(filterNewsButton))).perform(click());
         onView((withId(filterButton))).perform(click());
     }
-
-    // Отмена операции фильтра новостей:
     public void filterNewsCansel() {
+        Allure.step( "Отмена операции фильтра новостей");
         onView((withId(filterNewsButton))).perform(click());
         onView((withId(R.id.cancel_button))).perform(click());
     }
-
-    // Сортировка новостей:
     public void sortNewsOnControlPanel() {
+        Allure.step( "Сортировка новостей");
         onView((withId(sortButton))).perform(click());
     }
 

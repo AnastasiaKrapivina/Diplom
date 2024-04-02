@@ -19,6 +19,7 @@ import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class Authorization {
@@ -29,14 +30,14 @@ public class Authorization {
     private static final int buttonLogOut = R.id.authorization_image_button;
     private static final int logOut = android.R.id.title;
 
-    // Подождать загрузку:
     public void waitForLoading() {
+        Allure.step("Подождать загрузку");
         long endTime = (System.currentTimeMillis() + 20000);
         while (System.currentTimeMillis() < endTime) ;
     }
 
-    // Ввод данных для авторизации:
     public void authorizationIn(String login, String password) {
+        Allure.step("Ввод данных для авторизации");
         onView((withId(loginId))).perform(click());
         onView(allOf(childAtPosition(childAtPosition(withId(loginId), 0), 0),
                 isDisplayed()))
@@ -48,8 +49,8 @@ public class Authorization {
         onView((withId(signButton))).perform(click());
     }
 
-    // Выход из авторизации:
     public void authorizationExit() {
+        Allure.step("Выход из авторизации");
         onView((withId(buttonLogOut))).perform(click());
         onView((withId(logOut))).perform(click());
     }
