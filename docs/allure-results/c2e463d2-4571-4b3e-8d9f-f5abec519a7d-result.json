@@ -1,0 +1,121 @@
+{
+    "name": "Тест 4 Переход с главной страницы в раздел 'Новости' через кнопку 'Все новости'",
+    "start": 1712134572463,
+    "stop": 1712134581864,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Подождать загрузку",
+            "start": 1712134572731,
+            "stop": 1712134572731,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод данных для авторизации",
+            "start": 1712134580731,
+            "stop": 1712134580731,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход  с главной страницы в раздел Новости через кнопку Все новости",
+            "start": 1712134580750,
+            "stop": 1712134580750,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Прорверить переход на страницу",
+            "start": 1712134581308,
+            "stop": 1712134581308,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "c2e463d2-4571-4b3e-8d9f-f5abec519a7d",
+    "historyId": "fc2a908325add8dd1278e92791c75922",
+    "fullName": "ru.iteco.fmhandroid.ui.NavigationTest.navigationFromMainPageToNewsFromAllNewsButtonTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.NavigationTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "navigationFromMainPageToNewsFromAllNewsButtonTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.NavigationTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(60)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        },
+        {
+            "name": "epic",
+            "value": "Навигация"
+        }
+    ]
+}
