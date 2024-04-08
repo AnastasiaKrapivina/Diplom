@@ -1,7 +1,7 @@
 {
-    "name": "Тест 8 Переход из раздела 'Новости' в раздел 'Панель управления'",
-    "start": 1712134561431,
-    "stop": 1712134572433,
+    "name": "Тест 2 Выход из приложения",
+    "start": 1712575205899,
+    "stop": 1712575237116,
     "stage": "finished",
     "description": null,
     "descriptionHtml": null,
@@ -10,8 +10,40 @@
     "steps": [
         {
             "name": "Подождать загрузку",
-            "start": 1712134561734,
-            "stop": 1712134561734,
+            "start": 1712575207431,
+            "stop": 1712575207431,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Выход из авторизации",
+            "start": 1712575215431,
+            "stop": 1712575215431,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Подождать загрузку",
+            "start": 1712575216568,
+            "stop": 1712575216568,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -26,8 +58,8 @@
         },
         {
             "name": "Ввод данных для авторизации",
-            "start": 1712134569734,
-            "stop": 1712134569734,
+            "start": 1712575224568,
+            "stop": 1712575224568,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -41,9 +73,9 @@
             ]
         },
         {
-            "name": "Переход  с главной страницы через главное меню в разделы приложения",
-            "start": 1712134569758,
-            "stop": 1712134569758,
+            "name": "Подождать загрузку",
+            "start": 1712575226800,
+            "stop": 1712575226800,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -57,9 +89,9 @@
             ]
         },
         {
-            "name": "Переход  с из раздела Новости в раздел О приложении  через главное меню",
-            "start": 1712134570997,
-            "stop": 1712134570997,
+            "name": "Выход из авторизации",
+            "start": 1712575234800,
+            "stop": 1712575234800,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -74,8 +106,8 @@
         },
         {
             "name": "Прорверить переход на страницу",
-            "start": 1712134571568,
-            "stop": 1712134571568,
+            "start": 1712575235687,
+            "stop": 1712575235687,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -93,9 +125,9 @@
     ],
     "parameters": [
     ],
-    "uuid": "0c601f55-cd19-41dc-acea-9fc21731d8cc",
-    "historyId": "788bdcfb0d35eec4db5db975a584e620",
-    "fullName": "ru.iteco.fmhandroid.ui.NavigationTest.navigationFromNewsPageToControlPanelTest",
+    "uuid": "d1e4a49a-4a3b-446d-905c-c8b1d3ba2788",
+    "historyId": "f3b291e7f368ce36f4f08e9f5f45cbd3",
+    "fullName": "ru.iteco.fmhandroid.ui.AuthorizationTest.authorizationExitTest",
     "labels": [
         {
             "name": "package",
@@ -103,15 +135,15 @@
         },
         {
             "name": "testClass",
-            "value": "ru.iteco.fmhandroid.ui.NavigationTest"
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationTest"
         },
         {
             "name": "testMethod",
-            "value": "navigationFromNewsPageToControlPanelTest"
+            "value": "authorizationExitTest"
         },
         {
             "name": "suite",
-            "value": "ru.iteco.fmhandroid.ui.NavigationTest"
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationTest"
         },
         {
             "name": "host",
@@ -119,7 +151,7 @@
         },
         {
             "name": "thread",
-            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(60)"
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(81)"
         },
         {
             "name": "framework",
@@ -131,7 +163,7 @@
         },
         {
             "name": "epic",
-            "value": "Навигация"
+            "value": "Авторизация пользователя"
         }
     ]
 }

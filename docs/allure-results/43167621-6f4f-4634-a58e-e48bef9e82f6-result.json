@@ -1,7 +1,7 @@
 {
-    "name": "Тест 4 Переход с главной страницы в раздел 'Новости' через кнопку 'Все новости'",
-    "start": 1712134572463,
-    "stop": 1712134581864,
+    "name": "Тест 5 Переход с главной страницы в раздел 'О приложении' через меню 'бургер'",
+    "start": 1712580657665,
+    "stop": 1712580667985,
     "stage": "finished",
     "description": null,
     "descriptionHtml": null,
@@ -10,8 +10,8 @@
     "steps": [
         {
             "name": "Подождать загрузку",
-            "start": 1712134572731,
-            "stop": 1712134572731,
+            "start": 1712580657992,
+            "stop": 1712580657992,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -26,8 +26,8 @@
         },
         {
             "name": "Ввод данных для авторизации",
-            "start": 1712134580731,
-            "stop": 1712134580731,
+            "start": 1712580665992,
+            "stop": 1712580665992,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -41,9 +41,9 @@
             ]
         },
         {
-            "name": "Переход  с главной страницы в раздел Новости через кнопку Все новости",
-            "start": 1712134580750,
-            "stop": 1712134580750,
+            "name": "Переход  с главной страницы через главное меню в разделы приложения",
+            "start": 1712580666017,
+            "stop": 1712580666017,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -58,8 +58,8 @@
         },
         {
             "name": "Прорверить переход на страницу",
-            "start": 1712134581308,
-            "stop": 1712134581308,
+            "start": 1712580666881,
+            "stop": 1712580666881,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -77,9 +77,9 @@
     ],
     "parameters": [
     ],
-    "uuid": "c2e463d2-4571-4b3e-8d9f-f5abec519a7d",
-    "historyId": "fc2a908325add8dd1278e92791c75922",
-    "fullName": "ru.iteco.fmhandroid.ui.NavigationTest.navigationFromMainPageToNewsFromAllNewsButtonTest",
+    "uuid": "43167621-6f4f-4634-a58e-e48bef9e82f6",
+    "historyId": "2e5a97c703b98a6daa83244e0b7fdbba",
+    "fullName": "ru.iteco.fmhandroid.ui.NavigationTest.navigationFromMainPageToAboutTest",
     "labels": [
         {
             "name": "package",
@@ -91,7 +91,7 @@
         },
         {
             "name": "testMethod",
-            "value": "navigationFromMainPageToNewsFromAllNewsButtonTest"
+            "value": "navigationFromMainPageToAboutTest"
         },
         {
             "name": "suite",
@@ -103,7 +103,7 @@
         },
         {
             "name": "thread",
-            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(60)"
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(81)"
         },
         {
             "name": "framework",

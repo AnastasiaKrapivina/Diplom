@@ -2,7 +2,6 @@ package page;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
 import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
@@ -10,16 +9,13 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
-import static org.hamcrest.Matchers.not;
-import static kotlinx.coroutines.flow.FlowKt.withIndex;
 import static page.News.sortButton;
+import static utilities.WithIndex.withIndex;
 
 import android.view.View;
+
 import androidx.test.espresso.ViewInteraction;
-import org.hamcrest.Description;
-import org.hamcrest.Matcher;
-import org.hamcrest.Matchers;
-import org.hamcrest.TypeSafeMatcher;
+
 import org.hamcrest.core.IsInstanceOf;
 
 import io.qameta.allure.kotlin.Allure;
@@ -66,24 +62,11 @@ public class Matches {
         onView(withId(sortButton)).check(matches(isClickable()));
     }
 
-
-    public static Matcher<View> withIndex(final Matcher<View> matcher, final int index) {
-        return new TypeSafeMatcher<View>() {
-            int currentIndex = 0;
-
-            @Override
-            public void describeTo(Description description) {
-                description.appendText("with index: ");
-                description.appendValue(index);
-                matcher.describeTo(description);
-            }
-
-            @Override
-            public boolean matchesSafely(View view) {
-                return matcher.matches(view) && currentIndex++ == index;
-            }
-        };
+    public void fillEmptyFields() {
+        Allure.step( "Проверить сообщение о вводе пустых строк");
+        onView(
+                allOf(withIndex(withId(R.id.nav_host_fragment),0),
+                        isDisplayed()))
+                .check(matches((isDisplayed())));
     }
-
-
 }

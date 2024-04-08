@@ -1,7 +1,7 @@
 {
     "name": "Тест 13 Фильтр новостей в разделе Новости оставив поля фильтра незаполненными",
-    "start": 1712134743230,
-    "stop": 1712134754395,
+    "start": 1712580978706,
+    "stop": 1712580990418,
     "stage": "finished",
     "description": null,
     "descriptionHtml": null,
@@ -10,8 +10,8 @@
     "steps": [
         {
             "name": "Подождать загрузку",
-            "start": 1712134743530,
-            "stop": 1712134743530,
+            "start": 1712580979044,
+            "stop": 1712580979044,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -26,8 +26,8 @@
         },
         {
             "name": "Ввод данных для авторизации",
-            "start": 1712134751530,
-            "stop": 1712134751530,
+            "start": 1712580987044,
+            "stop": 1712580987044,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -42,8 +42,8 @@
         },
         {
             "name": "Переход  с главной страницы через главное меню в разделы приложения",
-            "start": 1712134751557,
-            "stop": 1712134751557,
+            "start": 1712580987072,
+            "stop": 1712580987072,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -58,8 +58,8 @@
         },
         {
             "name": "Фильтр новостей с незаполненной формой",
-            "start": 1712134752732,
-            "stop": 1712134752732,
+            "start": 1712580988423,
+            "stop": 1712580988423,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -74,8 +74,8 @@
         },
         {
             "name": "Прорверить переход на страницу",
-            "start": 1712134753777,
-            "stop": 1712134753777,
+            "start": 1712580989620,
+            "stop": 1712580989620,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -93,7 +93,7 @@
     ],
     "parameters": [
     ],
-    "uuid": "8e0552a5-3480-4bfe-9b34-5b796fffa53d",
+    "uuid": "df27937c-e3f8-49bc-ae2c-95bde32b1055",
     "historyId": "6e7f62dac667a10c818618a0aa6d6962",
     "fullName": "ru.iteco.fmhandroid.ui.NewsTest.filterNewsOnNewsEmptyTest",
     "labels": [
@@ -119,7 +119,7 @@
         },
         {
             "name": "thread",
-            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(60)"
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(79)"
         },
         {
             "name": "framework",

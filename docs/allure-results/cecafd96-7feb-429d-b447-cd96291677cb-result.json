@@ -1,7 +1,7 @@
 {
-    "name": "Тест 10 Создание новости",
-    "start": 1712134791198,
-    "stop": 1712134816358,
+    "name": "Тест 17 Отправка незаполненных полей формы авторизации",
+    "start": 1712575264254,
+    "stop": 1712575291151,
     "stage": "finished",
     "description": null,
     "descriptionHtml": null,
@@ -10,8 +10,40 @@
     "steps": [
         {
             "name": "Подождать загрузку",
-            "start": 1712134791518,
-            "stop": 1712134791518,
+            "start": 1712575264615,
+            "stop": 1712575264615,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Выход из авторизации",
+            "start": 1712575272615,
+            "stop": 1712575272615,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Подождать загрузку",
+            "start": 1712575272619,
+            "stop": 1712575272619,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -26,56 +58,8 @@
         },
         {
             "name": "Ввод данных для авторизации",
-            "start": 1712134799518,
-            "stop": 1712134799518,
-            "stage": "finished",
-            "description": null,
-            "descriptionHtml": null,
-            "status": "passed",
-            "statusDetails": null,
-            "steps": [
-            ],
-            "attachments": [
-            ],
-            "parameters": [
-            ]
-        },
-        {
-            "name": "Переход  с главной страницы через главное меню в разделы приложения",
-            "start": 1712134799542,
-            "stop": 1712134799542,
-            "stage": "finished",
-            "description": null,
-            "descriptionHtml": null,
-            "status": "passed",
-            "statusDetails": null,
-            "steps": [
-            ],
-            "attachments": [
-            ],
-            "parameters": [
-            ]
-        },
-        {
-            "name": "Переход  с из раздела Новости в раздел О приложении  через главное меню",
-            "start": 1712134800875,
-            "stop": 1712134800875,
-            "stage": "finished",
-            "description": null,
-            "descriptionHtml": null,
-            "status": "passed",
-            "statusDetails": null,
-            "steps": [
-            ],
-            "attachments": [
-            ],
-            "parameters": [
-            ]
-        },
-        {
-            "name": "Добавить новость",
-            "start": 1712134801412,
-            "stop": 1712134801412,
+            "start": 1712575280619,
+            "stop": 1712575280619,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -90,8 +74,8 @@
         },
         {
             "name": "Подождать загрузку",
-            "start": 1712134806467,
-            "stop": 1712134806467,
+            "start": 1712575282526,
+            "stop": 1712575282526,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -105,9 +89,9 @@
             ]
         },
         {
-            "name": "Переход  с главной страницы через главное меню в разделы приложения",
-            "start": 1712134814467,
-            "stop": 1712134814467,
+            "name": "Прорверить всплывающее окно",
+            "start": 1712575290526,
+            "stop": 1712575290526,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -121,9 +105,9 @@
             ]
         },
         {
-            "name": "Прорверить появления новости по заголовку",
-            "start": 1712134815745,
-            "stop": 1712134815745,
+            "name": "Прорверить всплывающее окно при входе с ошибочными данными",
+            "start": 1712575290528,
+            "stop": 1712575290528,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -141,9 +125,9 @@
     ],
     "parameters": [
     ],
-    "uuid": "8a9a36a8-7d5b-4323-a620-9de0c3cca168",
-    "historyId": "1f9fe7327d1bcdbd3098640504224142",
-    "fullName": "ru.iteco.fmhandroid.ui.NewsTest.creationOfNewsTest",
+    "uuid": "cecafd96-7feb-429d-b447-cd96291677cb",
+    "historyId": "434ab6abf18a4f2c9a79d309c559fe28",
+    "fullName": "ru.iteco.fmhandroid.ui.AuthorizationTest.authorizationInvalid",
     "labels": [
         {
             "name": "package",
@@ -151,15 +135,15 @@
         },
         {
             "name": "testClass",
-            "value": "ru.iteco.fmhandroid.ui.NewsTest"
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationTest"
         },
         {
             "name": "testMethod",
-            "value": "creationOfNewsTest"
+            "value": "authorizationInvalid"
         },
         {
             "name": "suite",
-            "value": "ru.iteco.fmhandroid.ui.NewsTest"
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationTest"
         },
         {
             "name": "host",
@@ -167,7 +151,7 @@
         },
         {
             "name": "thread",
-            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(60)"
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(81)"
         },
         {
             "name": "framework",
@@ -179,7 +163,7 @@
         },
         {
             "name": "epic",
-            "value": "Раздел Новости"
+            "value": "Авторизация пользователя"
         }
     ]
 }

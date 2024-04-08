@@ -1,7 +1,7 @@
 {
-    "name": "Тест 20 Добавление новости с незаполненными полями",
-    "start": 1712134693731,
-    "stop": 1712134711028,
+    "name": "Тест 15 Фильтр новостей в разделе Новости по параметру Категория",
+    "start": 1712581054756,
+    "stop": 1712581081240,
     "stage": "finished",
     "description": null,
     "descriptionHtml": null,
@@ -10,8 +10,8 @@
     "steps": [
         {
             "name": "Подождать загрузку",
-            "start": 1712134694781,
-            "stop": 1712134694781,
+            "start": 1712581055207,
+            "stop": 1712581055207,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -26,8 +26,8 @@
         },
         {
             "name": "Ввод данных для авторизации",
-            "start": 1712134702781,
-            "stop": 1712134702781,
+            "start": 1712581063207,
+            "stop": 1712581063207,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -42,8 +42,8 @@
         },
         {
             "name": "Переход  с главной страницы через главное меню в разделы приложения",
-            "start": 1712134702853,
-            "stop": 1712134702853,
+            "start": 1712581063253,
+            "stop": 1712581063253,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -58,8 +58,8 @@
         },
         {
             "name": "Переход  с из раздела Новости в раздел О приложении  через главное меню",
-            "start": 1712134704227,
-            "stop": 1712134704227,
+            "start": 1712581064709,
+            "stop": 1712581064709,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -74,8 +74,8 @@
         },
         {
             "name": "Добавить новость",
-            "start": 1712134704846,
-            "stop": 1712134704846,
+            "start": 1712581065288,
+            "stop": 1712581065288,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -89,9 +89,73 @@
             ]
         },
         {
-            "name": "Прорверить переход на страницу",
-            "start": 1712134710126,
-            "stop": 1712134710126,
+            "name": "Добавить новость",
+            "start": 1712581071143,
+            "stop": 1712581071143,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход  с главной страницы через главное меню в разделы приложения",
+            "start": 1712581076526,
+            "stop": 1712581076526,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Фильтр новостей по категории",
+            "start": 1712581078040,
+            "stop": 1712581078040,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход  с главной страницы через главное меню в разделы приложения",
+            "start": 1712581079785,
+            "stop": 1712581079785,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Прорверить появления новости по заголовку",
+            "start": 1712581080569,
+            "stop": 1712581080569,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -109,9 +173,9 @@
     ],
     "parameters": [
     ],
-    "uuid": "c60a753d-1705-41b4-8137-8d41b2d66a4e",
-    "historyId": "8ecd360327f0524a103181ea822d814",
-    "fullName": "ru.iteco.fmhandroid.ui.NewsTest.creationOfNewsEmptyTest",
+    "uuid": "c3c4d15e-9b3c-42db-b81d-913ec5618257",
+    "historyId": "15236ba98499f521bf42623525628b57",
+    "fullName": "ru.iteco.fmhandroid.ui.NewsTest.filterNewsOnNewsCategoryTest",
     "labels": [
         {
             "name": "package",
@@ -123,7 +187,7 @@
         },
         {
             "name": "testMethod",
-            "value": "creationOfNewsEmptyTest"
+            "value": "filterNewsOnNewsCategoryTest"
         },
         {
             "name": "suite",
@@ -135,7 +199,7 @@
         },
         {
             "name": "thread",
-            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(60)"
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(79)"
         },
         {
             "name": "framework",

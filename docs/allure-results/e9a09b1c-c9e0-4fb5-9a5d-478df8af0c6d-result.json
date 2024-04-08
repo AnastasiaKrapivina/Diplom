@@ -1,7 +1,7 @@
 {
-    "name": "Тест 11 Отмена операции 'Создание новости'",
-    "start": 1712134722626,
-    "stop": 1712134743111,
+    "name": "Тест 8 Переход из раздела 'Новости' в раздел 'Панель управления'",
+    "start": 1712580668018,
+    "stop": 1712580678961,
     "stage": "finished",
     "description": null,
     "descriptionHtml": null,
@@ -10,8 +10,8 @@
     "steps": [
         {
             "name": "Подождать загрузку",
-            "start": 1712134723073,
-            "stop": 1712134723073,
+            "start": 1712580668342,
+            "stop": 1712580668342,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -26,8 +26,8 @@
         },
         {
             "name": "Ввод данных для авторизации",
-            "start": 1712134731073,
-            "stop": 1712134731073,
+            "start": 1712580676342,
+            "stop": 1712580676342,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -42,8 +42,8 @@
         },
         {
             "name": "Переход  с главной страницы через главное меню в разделы приложения",
-            "start": 1712134731101,
-            "stop": 1712134731101,
+            "start": 1712580676394,
+            "stop": 1712580676394,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -58,40 +58,8 @@
         },
         {
             "name": "Переход  с из раздела Новости в раздел О приложении  через главное меню",
-            "start": 1712134732367,
-            "stop": 1712134732367,
-            "stage": "finished",
-            "description": null,
-            "descriptionHtml": null,
-            "status": "passed",
-            "statusDetails": null,
-            "steps": [
-            ],
-            "attachments": [
-            ],
-            "parameters": [
-            ]
-        },
-        {
-            "name": "Отмена добавления новости",
-            "start": 1712134732907,
-            "stop": 1712134732907,
-            "stage": "finished",
-            "description": null,
-            "descriptionHtml": null,
-            "status": "passed",
-            "statusDetails": null,
-            "steps": [
-            ],
-            "attachments": [
-            ],
-            "parameters": [
-            ]
-        },
-        {
-            "name": "Подождать загрузку",
-            "start": 1712134734603,
-            "stop": 1712134734603,
+            "start": 1712580677690,
+            "stop": 1712580677690,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -106,8 +74,8 @@
         },
         {
             "name": "Прорверить переход на страницу",
-            "start": 1712134742603,
-            "stop": 1712134742603,
+            "start": 1712580678285,
+            "stop": 1712580678285,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -125,9 +93,9 @@
     ],
     "parameters": [
     ],
-    "uuid": "7ad43e8b-7910-463f-9347-f65c5d479511",
-    "historyId": "a96a87fc98b1feddc0a0902ec83f4765",
-    "fullName": "ru.iteco.fmhandroid.ui.NewsTest.cancelCancelreationOfNewsTest",
+    "uuid": "e9a09b1c-c9e0-4fb5-9a5d-478df8af0c6d",
+    "historyId": "788bdcfb0d35eec4db5db975a584e620",
+    "fullName": "ru.iteco.fmhandroid.ui.NavigationTest.navigationFromNewsPageToControlPanelTest",
     "labels": [
         {
             "name": "package",
@@ -135,15 +103,15 @@
         },
         {
             "name": "testClass",
-            "value": "ru.iteco.fmhandroid.ui.NewsTest"
+            "value": "ru.iteco.fmhandroid.ui.NavigationTest"
         },
         {
             "name": "testMethod",
-            "value": "cancelCancelreationOfNewsTest"
+            "value": "navigationFromNewsPageToControlPanelTest"
         },
         {
             "name": "suite",
-            "value": "ru.iteco.fmhandroid.ui.NewsTest"
+            "value": "ru.iteco.fmhandroid.ui.NavigationTest"
         },
         {
             "name": "host",
@@ -151,7 +119,7 @@
         },
         {
             "name": "thread",
-            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(60)"
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(81)"
         },
         {
             "name": "framework",
@@ -163,7 +131,7 @@
         },
         {
             "name": "epic",
-            "value": "Раздел Новости"
+            "value": "Навигация"
         }
     ]
 }

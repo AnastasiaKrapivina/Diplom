@@ -1,7 +1,6 @@
 package ru.iteco.fmhandroid.ui;
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 
 import org.junit.Before;
@@ -9,6 +8,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import data.DataHelper;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Epic;
 import io.qameta.allure.kotlin.junit4.DisplayName;
@@ -16,6 +16,7 @@ import page.Authorization;
 import page.Matches;
 import page.Navigation;
 import page.News;
+import utilities.WaitForLoading;
 
 @LargeTest
 //@RunWith(AndroidJUnit4.class)
@@ -27,6 +28,13 @@ public class NewsTest {
     Authorization authorization = new Authorization();
     Matches matches = new Matches();
     News news = new News();
+    DataHelper data = new DataHelper();
+    WaitForLoading utilities = new WaitForLoading();
+    String categoryFirst = "Объявление";
+    String categorySecond = "Зарплата";
+    String newNews = "Создание новости";
+    String newsPage = "News";
+    String controlPanelPage = "Control panel";
 
     @Rule
     public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
@@ -35,11 +43,11 @@ public class NewsTest {
     @Before
     public void testLogOut() {
 
-        authorization.waitForLoading();
+        utilities.waitForLoading();
 
         try {
-            authorization.authorizationIn("login2", "password2");
-            authorization.waitForLoading();
+            authorization.authorizationIn(data.getValidLogin(), data.getValidPassword());
+            utilities.waitForLoading();
 
         } catch (Exception es) {
 
@@ -50,29 +58,29 @@ public class NewsTest {
     @Test
     @DisplayName("Тест 10 Создание новости")
     public void creationOfNewsTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         navigation.navigationFromNewsPageToControlPanel();
-        news.addNews("Объявление", "Создание новости", "Создание новости");
-        authorization.waitForLoading();
-        navigation.navigationFromMainPageMainMenu("News");
-        matches.searchNewsCategory("Создание новости", 0);
+        news.addNews(categoryFirst, newNews, newNews);
+        utilities.waitForLoading();
+        navigation.navigationFromMainPageMainMenu(newsPage);
+        matches.searchNewsCategory(newNews, 0);
     }
 
     @Test
     @DisplayName("Тест 11 Отмена операции 'Создание новости'")
     public void cancelCancelreationOfNewsTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         navigation.navigationFromNewsPageToControlPanel();
         news.cancelNews();
-        authorization.waitForLoading();
-        matches.examinationValue("Control panel");
+        utilities.waitForLoading();
+        matches.examinationValue(controlPanelPage);
     }
     @Test
     @DisplayName("Тест 12 Сортировка новостей в разделе Новости")
     public void sortNewsOnNewsTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         news.sortNewsOnControlPanel();
-        authorization.waitForLoading();
+        utilities.waitForLoading();
         news.sortNewsOnControlPanel();
         matches.buttonClickability();
     }
@@ -80,48 +88,49 @@ public class NewsTest {
     @Test
     @DisplayName("Тест 13 Фильтр новостей в разделе Новости оставив поля фильтра незаполненными")
     public void filterNewsOnNewsEmptyTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         news.filterNewsEmpty();
-        matches.examinationValue("News");
+        matches.examinationValue(newsPage);
     }
     @Test
     @DisplayName("Тест 14 Отмена операции фильтра новостей в разделе Новости")
     public void filterNewsOnNewsCanselTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         news.filterNewsCansel();
-        matches.examinationValue("News");
+        matches.examinationValue(newsPage);
 
     }
     @Test
     @DisplayName("Тест 15 Фильтр новостей в разделе Новости по параметру Категория")
     public void filterNewsOnNewsCategoryTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         navigation.navigationFromNewsPageToControlPanel();
-        news.addNews("Зарплата", "Зарплата", "Зарплата");
-        news.addNews("Объявление", "Объявление", "Объявление");
-        navigation.navigationFromMainPageMainMenu("News");
-        news.filterNewsCategory("Зарплата");
-        navigation.navigationFromMainPageMainMenu("News");
-        matches.searchNewsCategory("Зарплата", 0);
+        news.addNews(categorySecond, categorySecond, categorySecond);
+        news.addNews(categoryFirst, categoryFirst, categoryFirst);
+        navigation.navigationFromMainPageMainMenu(newsPage);
+        news.filterNewsCategory(categorySecond);
+        navigation.navigationFromMainPageMainMenu(newsPage);
+        matches.searchNewsCategory(categorySecond, 0);
     }
 
     @Test
     @DisplayName("Тест 16 Просмотр новости в разделе 'Новости'")
     public void viewingNewsOnNewsPageTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         navigation.navigationFromNewsPageToControlPanel();
-        news.addNews("Объявление", "Создание новости", "Создание новости");
-        navigation.navigationFromMainPageMainMenu("News");
+        news.addNews(categoryFirst, newNews, newNews);
+        navigation.navigationFromMainPageMainMenu(newsPage);
         news.clickNews(0);
-        matches.searchNewsDescription("Создание новости", 0);
+        matches.searchNewsDescription(newNews, 0);
     }
     @Test
     @DisplayName("Тест 20 Добавление новости с незаполненными полями")
     public void creationOfNewsEmptyTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         navigation.navigationFromNewsPageToControlPanel();
-        news.addNews("Объявление", "", "");
-        matches.examinationValue("Creating");
+        news.addNews(categoryFirst, "", "");
+//        matches.examinationValue("Creating");
+        matches.fillEmptyFields();
     }
 
 

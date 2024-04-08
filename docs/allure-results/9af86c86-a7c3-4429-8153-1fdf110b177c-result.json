@@ -1,7 +1,7 @@
 {
-    "name": "Тест 18 Ввод недопустимого значения в поле 'Логин'",
-    "start": 1712134420983,
-    "stop": 1712134448507,
+    "name": "Тест 12 Сортировка новостей в разделе Новости",
+    "start": 1712581009438,
+    "stop": 1712581028592,
     "stage": "finished",
     "description": null,
     "descriptionHtml": null,
@@ -10,40 +10,8 @@
     "steps": [
         {
             "name": "Подождать загрузку",
-            "start": 1712134421368,
-            "stop": 1712134421368,
-            "stage": "finished",
-            "description": null,
-            "descriptionHtml": null,
-            "status": "passed",
-            "statusDetails": null,
-            "steps": [
-            ],
-            "attachments": [
-            ],
-            "parameters": [
-            ]
-        },
-        {
-            "name": "Выход из авторизации",
-            "start": 1712134429368,
-            "stop": 1712134429368,
-            "stage": "finished",
-            "description": null,
-            "descriptionHtml": null,
-            "status": "passed",
-            "statusDetails": null,
-            "steps": [
-            ],
-            "attachments": [
-            ],
-            "parameters": [
-            ]
-        },
-        {
-            "name": "Подождать загрузку",
-            "start": 1712134430191,
-            "stop": 1712134430191,
+            "start": 1712581009933,
+            "stop": 1712581009933,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -58,8 +26,40 @@
         },
         {
             "name": "Ввод данных для авторизации",
-            "start": 1712134438191,
-            "stop": 1712134438191,
+            "start": 1712581017933,
+            "stop": 1712581017933,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход  с главной страницы через главное меню в разделы приложения",
+            "start": 1712581017963,
+            "stop": 1712581017963,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Сортировка новостей",
+            "start": 1712581019208,
+            "stop": 1712581019208,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -74,8 +74,8 @@
         },
         {
             "name": "Подождать загрузку",
-            "start": 1712134440042,
-            "stop": 1712134440042,
+            "start": 1712581019568,
+            "stop": 1712581019568,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -89,9 +89,9 @@
             ]
         },
         {
-            "name": "Прорверить всплывающее окно",
-            "start": 1712134448042,
-            "stop": 1712134448042,
+            "name": "Сортировка новостей",
+            "start": 1712581027568,
+            "stop": 1712581027568,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -105,9 +105,9 @@
             ]
         },
         {
-            "name": "Прорверить всплывающее окно при входе с ошибочными данными",
-            "start": 1712134448045,
-            "stop": 1712134448045,
+            "name": "Проверить кликабельность кнопки",
+            "start": 1712581027918,
+            "stop": 1712581027918,
             "stage": "finished",
             "description": null,
             "descriptionHtml": null,
@@ -125,9 +125,9 @@
     ],
     "parameters": [
     ],
-    "uuid": "b99a208a-233a-444e-82bd-108f7a5e36e7",
-    "historyId": "d23fc59e4987d6bd3078c6ceafa5ac9",
-    "fullName": "ru.iteco.fmhandroid.ui.AuthorizationTest.authorizationInvalidLogin",
+    "uuid": "9af86c86-a7c3-4429-8153-1fdf110b177c",
+    "historyId": "8833b6f26cd205fe0349c8f6eed42c8",
+    "fullName": "ru.iteco.fmhandroid.ui.NewsTest.sortNewsOnNewsTest",
     "labels": [
         {
             "name": "package",
@@ -135,15 +135,15 @@
         },
         {
             "name": "testClass",
-            "value": "ru.iteco.fmhandroid.ui.AuthorizationTest"
+            "value": "ru.iteco.fmhandroid.ui.NewsTest"
         },
         {
             "name": "testMethod",
-            "value": "authorizationInvalidLogin"
+            "value": "sortNewsOnNewsTest"
         },
         {
             "name": "suite",
-            "value": "ru.iteco.fmhandroid.ui.AuthorizationTest"
+            "value": "ru.iteco.fmhandroid.ui.NewsTest"
         },
         {
             "name": "host",
@@ -151,7 +151,7 @@
         },
         {
             "name": "thread",
-            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(58)"
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(79)"
         },
         {
             "name": "framework",
@@ -163,7 +163,7 @@
         },
         {
             "name": "epic",
-            "value": "Авторизация пользователя"
+            "value": "Раздел Новости"
         }
     ]
 }

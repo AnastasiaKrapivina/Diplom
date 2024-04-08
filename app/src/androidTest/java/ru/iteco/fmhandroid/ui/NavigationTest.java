@@ -1,7 +1,6 @@
 package ru.iteco.fmhandroid.ui;
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 
 import org.junit.Before;
@@ -9,12 +8,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import data.DataHelper;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Epic;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 import page.Authorization;
 import page.Matches;
 import page.Navigation;
+import utilities.WaitForLoading;
 
 @LargeTest
 ////@RunWith(AndroidJUnit4.class)
@@ -25,6 +26,11 @@ public class NavigationTest {
     Navigation navigation = new Navigation();
     Authorization authorization = new Authorization();
     Matches matches = new Matches();
+    WaitForLoading utilities = new WaitForLoading();
+    DataHelper data = new DataHelper();
+    String newsPage = "News";
+    String aboutPage = "About";
+    String controlPanelPage = "Control panel";
 
     @Rule
     public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
@@ -33,11 +39,11 @@ public class NavigationTest {
     @Before
     public void testLogOut() {
 
-        authorization.waitForLoading();
+        utilities.waitForLoading();
 
         try {
-            authorization.authorizationIn("login2", "password2");
-            authorization.waitForLoading();
+            authorization.authorizationIn(data.getValidLogin(), data.getValidPassword());
+            utilities.waitForLoading();
 
         } catch (Exception es) {
 
@@ -47,7 +53,7 @@ public class NavigationTest {
     @Test
     @DisplayName("Тест 3 Переход с главной страницы в раздел 'Новости' через меню 'бургер'")
     public void navigationFromMainPageToNewsFromMainMenuTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         matches.examinationValue("News");
     }
 
@@ -61,7 +67,7 @@ public class NavigationTest {
     @Test
     @DisplayName("Тест 5 Переход с главной страницы в раздел 'О приложении' через меню 'бургер'")
     public void navigationFromMainPageToAboutTest() {
-        navigation.navigationFromMainPageMainMenu("About");
+        navigation.navigationFromMainPageMainMenu(aboutPage);
         matches.examinationValue("Version:");
     }
 
@@ -75,23 +81,23 @@ public class NavigationTest {
     @Test
     @DisplayName("Тест 7 Переход из раздела 'Новости' в раздел 'О приложении' через меню 'бургер'")
     public void navigationFromNewsPageToAboutFromMainMenuTest() {
-        navigation.navigationFromMainPageMainMenu("News");
-        navigation.navigationFromMainPageMainMenu("About");
+        navigation.navigationFromMainPageMainMenu(newsPage);
+        navigation.navigationFromMainPageMainMenu(aboutPage);
         matches.examinationValue("Version:");
     }
 
     @Test
     @DisplayName("Тест 8 Переход из раздела 'Новости' в раздел 'Панель управления'")
     public void navigationFromNewsPageToControlPanelTest() {
-        navigation.navigationFromMainPageMainMenu("News");
+        navigation.navigationFromMainPageMainMenu(newsPage);
         navigation.navigationFromNewsPageToControlPanel();
-        matches.examinationValue("Control panel");
+        matches.examinationValue(controlPanelPage);
     }
 
     @Test
     @DisplayName("Тест 9 Переход из раздела 'О приложении' на главную страницу")
     public void navigationFromAboutToMainPageTest() {
-        navigation.navigationFromMainPageMainMenu("About");
+        navigation.navigationFromMainPageMainMenu(aboutPage);
         navigation.navigationFromAboutToMainPage();
         matches.examinationValue("News");
     }
